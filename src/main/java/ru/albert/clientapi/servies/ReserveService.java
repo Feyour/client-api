@@ -1,21 +1,22 @@
 package ru.albert.clientapi.servies;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import ru.albert.clientapi.model.Order;
-import ru.albert.clientapi.repositories.OrderRepository;
+import ru.albert.clientapi.model.Reserve;
+import ru.albert.clientapi.repositories.ReserveRepository;
+
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 
-public class OrderService {
-    private final OrderRepository orderRepository;
+public class ReserveService {
+    private final ReserveRepository reserveRepository;
 
-    public List<Order> findAll() {
-        return orderRepository.findAll();
+
+    public List<Reserve> findAll() {
+        return reserveRepository.findAll();
     }
 
 }
